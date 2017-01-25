@@ -7,14 +7,14 @@ scratch. This page gets rid of all links and provides the needed markup only.
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>AdminLTE 2 | Starter</title>
+  <title>Gestionnaire | Accueil</title>
   <!-- Tell the browser to be responsive to screen width -->
   <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport">
   <!-- Bootstrap 3.3.6 -->
   <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.5.0/css/font-awesome.min.css">
-  <!-- Ionicons -->
+   <!-- Ionicons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="dist/css/AdminLTE.min.css">
@@ -75,13 +75,6 @@ desired effect
         <div class="navbar-custom-menu">
           <ul class="nav navbar-nav">
             <!-- Messages: style can be found in dropdown.less-->
-
-            <!-- /.messages-menu -->
-
-            <!-- Notifications Menu -->
-
-            <!-- Tasks Menu -->
-
             <!-- User Account Menu -->
             <li class="dropdown user user-menu">
               <!-- Menu Toggle Button -->
@@ -167,9 +160,29 @@ desired effect
         <ul class="sidebar-menu">
           <li class="header">MENU</li>
           <!-- Optionally, you can add icons to the links -->
-          <li class="active"><a href="#"><i class="fa fa-home"></i> <span>Accueil</span></a></li>
-          <li><a href="#"><i class="fa fa-user"></i> <span>Utilisateurs</span></a></li>
-          <li><a href="#"><i class="fa fa-users"></i> <span>Groupes</span></a></li>
+          <li class="active"><a href="index.html"><i class="fa fa-home"></i> <span>Accueil</span></a></li>
+          <li class="treeview">
+            <a href="#"><i class="fa fa-user"></i> <span>Utilisateurs</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+              <li><a href="#">Liste des utilisateurs</a></li>
+              <li><a href="pages/add_user.html">Ajouter un utilisateur</a></li>
+            </ul>
+          </li>
+          <li class="treeview">
+            <a href="#"><i class="fa fa-users"></i> <span>Groupes</span>
+              <span class="pull-right-container">
+                <i class="fa fa-angle-left pull-right"></i>
+              </span>
+            </a>
+            <ul class="treeview-menu">
+              <li><a href="#">Liste des groupes</a></li>
+              <li><a href="#">Ajouter un groupe</a></li>
+            </ul>
+          </li>
           <li class="treeview">
             <a href="#"><i class="fa fa-gear"></i> <span>Paramètres</span>
               <span class="pull-right-container">
@@ -177,8 +190,8 @@ desired effect
               </span>
             </a>
             <ul class="treeview-menu">
-              <li><a href="#">Link in level 2</a></li>
-              <li><a href="#">Link in level 2</a></li>
+              <li><a href="#">Editer les paramètres du site</a></li>
+              <li><a href="#">Modifier les informations</a></li>
             </ul>
           </li>
         </ul>
