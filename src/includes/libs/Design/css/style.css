@@ -1,0 +1,12 @@
+.widget-user .caption-title {
+	bottom: 80px;
+	text-align: center;
+	z-index: 15;
+	padding-top: 5px;
+	padding-bottom: 5px;
+	color: #fff;
+	padding-left: 20px;
+	text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+	background-color: rgba(112, 112, 112, 0.53);
+	width: 100%;
+}
