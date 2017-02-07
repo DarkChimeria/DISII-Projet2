@@ -57,7 +57,7 @@
  									<td>{$Users.user_firstname}</td>
  									<td>{$Users.user_mail}</td>
  									<td>
- 										<a href="index.php?gestion=Users&action=read&id={$Users.user_id}"><i class="fa fa-folder text-infos"></i></a>
+ 										<a href="index.php?gestion=users&action=detailsU&id={$Users.user_id}"><i class="fa fa-folder text-infos"></i></a>
  										<a href="index.php?gestion=Users&action=edit&id={$Users.user_id}"><i class="fa fa-pencil text-warning"></i></a>
  										<a href="index.php?gestion=Users&action=delete&id={$Users.user_id}"><i class="fa fa-close text-danger"></i></a>
  									</td>

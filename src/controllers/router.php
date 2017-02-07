@@ -6,6 +6,7 @@ Script de cours PHP - MVC - Smarty
 // $accueil = 'home';
 $login = 'login';
 $listUsers = 'listUsers';
+$detailsU = 'detailsU';
 
 switch($gestion){
 	case  'home':
@@ -34,6 +35,9 @@ if($val == $login){
 	login();
 }elseif($val == $listUsers){
 	listU();
-}elseif(empty($var)){
+}elseif($val == $detailsU){
+	$id = $_GET['id'];
+	detailsU($id);
+}elseif(empty($val)){
 	home();
 }

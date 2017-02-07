@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-02-05 20:39:20
+/* Smarty version 3.1.29, created on 2017-02-07 14:23:26
   from "C:\wamp64\www\p2\src\templates\users\usersViewsList.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_58978d78558478_56389274',
+  'unifunc' => 'content_5899d85e596588_09714362',
   'file_dependency' => 
   array (
     'a524f86352ca8bf65e6e44e5e2ad5c586d1d3e06' => 
     array (
       0 => 'C:\\wamp64\\www\\p2\\src\\templates\\users\\usersViewsList.tpl',
-      1 => 1486327159,
+      1 => 1486477404,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_58978d78558478_56389274 ($_smarty_tpl) {
+function content_5899d85e596588_09714362 ($_smarty_tpl) {
 ?>
  <div class="content-wrapper">
  	<!-- Content Header (Page header) -->
@@ -98,7 +98,7 @@ $__foreach_Users_0_saved_local_item = $_smarty_tpl->tpl_vars['Users'];
  									<td><?php echo $_smarty_tpl->tpl_vars['Users']->value['user_mail'];?>
 </td>
  									<td>
- 										<a href="index.php?gestion=Users&action=read&id=<?php echo $_smarty_tpl->tpl_vars['Users']->value['user_id'];?>
+ 										<a href="index.php?gestion=users&action=detailsU&id=<?php echo $_smarty_tpl->tpl_vars['Users']->value['user_id'];?>
 "><i class="fa fa-folder text-infos"></i></a>
  										<a href="index.php?gestion=Users&action=edit&id=<?php echo $_smarty_tpl->tpl_vars['Users']->value['user_id'];?>
 "><i class="fa fa-pencil text-warning"></i></a>

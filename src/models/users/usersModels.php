@@ -12,49 +12,30 @@ function listeUsers(){
 	return $idResult;
 }
 
-function listeCountLimitProduits($premierMessageAafficher,$nbproduits){
-	$cnx = getBD();
-	$idResult3 = $cnx->prepare('SELECT * FROM users LIMIT :start, :fin');
-	$idResult3->bindValue('start', $premierMessageAafficher, PDO::PARAM_INT);
-	$idResult3->bindValue('fin', $nbproduits, PDO::PARAM_INT);
-	$idResult3->execute();
-	return $idResult3;
+
+function listeCountLimitUsers($premierMessageAafficher,$nbproduits){
+    $cnx = getBD();
+    $idResult3 = $cnx->prepare('SELECT * FROM users LIMIT :start, :fin');
+    $idResult3->bindValue('start', $premierMessageAafficher, PDO::PARAM_INT);
+    $idResult3->bindValue('fin', $nbproduits, PDO::PARAM_INT);
+    $idResult3->execute();
+    return $idResult3;
 }
 
-function detailsProduit($id){
+function detailsUser($id){
 	$cnx = getBD();
-	$sql = 'SELECT * FROM Produit WHERE reference = ?';
+	$sql = 'SELECT * FROM users,usertype,listusersgroup,groups,licenses WHERE users.usertype_id=usertype.usertype_id AND listusersgroup.user_id = users.user_id AND listusersgroup.group_id = groups.group_id AND licenses.user_id=users.user_id AND users.user_id = ?';
 	$idResult  = executeR($cnx,$sql, array($id));
 	return $idResult;
 }
 
-function commandeProduit($id){
+function historyUser($id){
 	$cnx = getBD();
-	$sql = 'SELECT * FROM ligne_commande WHERE reference = ?';
-	$idResult2  = executeR($cnx,$sql, array($id));
-	return $idResult2;
+	$sql = 'SELECT * FROM users,usertype,listusersgroup,groups,licenses WHERE users.usertype_id=usertype.usertype_id AND listusersgroup.user_id = users.user_id AND listusersgroup.group_id = groups.group_id AND licenses.user_id=users.user_id AND users.user_id = ? ORDER BY listusersgroup.datestart DESC LIMIT 0,4';
+	$idResult1  = executeR($cnx,$sql, array($id));
+	return $idResult1;
 }
 
-function ajoutProduit($designation,$quantite,$descriptif,$prixunitaire,$stock,$piece){
-	$cnx = getBD();
-	$sql = 'INSERT INTO produit (designation,quantite,descriptif,prix_unitaire_HT,stock,poids_piece) VALUES (?,?,?,?,?,?)';
-	$idResult  = executeR($cnx,$sql, array($designation,$quantite,$descriptif,$prixunitaire,$stock,$piece));
-	Header( 'Location: index.php?success=1' );
-}
-
-function suppressionProduit($id){
-	$cnx = getBD();
-	$sql = 'DELETE FROM produit WHERE reference = ?';
-	$idResult  = executeR($cnx,$sql, array($id));
-	Header( 'Location: index.php?success=3' );
-}
-
-function editionProduit($designation,$quantite,$descriptif,$prixunitaire,$stock,$piece,$id){
-	$cnx = getBD();
-	$sql = 'UPDATE produit SET designation=?,quantite=?,descriptif=?,prix_unitaire_HT=?,stock=?,poids_piece=? WHERE reference = ?';
-	$idResult  = executeR($cnx,$sql, array($designation,$quantite,$descriptif,$prixunitaire,$stock,$piece,$id));
-	Header( 'Location: index.php?gestion=produit&action=edit&id='. $id . '&success=1' );
-}
 
 function settingsAffichage(){
 	$cnx = getBD();

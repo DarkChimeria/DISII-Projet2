@@ -63,7 +63,7 @@ desired effect
 				<!-- mini logo for sidebar mini 50x50 pixels -->
 				<span class="logo-mini"><b>GS</b>A</span>
 				<!-- logo for regular state and mobile devices -->
-				<img src="upload_files/association_settings/{$assoLogo}" class="img" alt="User Image">
+				<!-- <img src="upload_files/association_settings/{$assoLogo}" class="img" alt="User Image"> -->
 				<b>{$assoName}</b>
 			</a>
 

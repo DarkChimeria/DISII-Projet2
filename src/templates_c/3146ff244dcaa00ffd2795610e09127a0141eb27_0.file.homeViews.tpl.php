@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-02-05 21:21:22
+/* Smarty version 3.1.29, created on 2017-02-07 11:34:42
   from "C:\wamp64\www\p2\src\templates\home\homeViews.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_58979752745017_56984693',
+  'unifunc' => 'content_5899b0d2120cc2_67328185',
   'file_dependency' => 
   array (
     '3146ff244dcaa00ffd2795610e09127a0141eb27' => 
     array (
       0 => 'C:\\wamp64\\www\\p2\\src\\templates\\home\\homeViews.tpl',
-      1 => 1486329671,
+      1 => 1486467279,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_58979752745017_56984693 ($_smarty_tpl) {
+function content_5899b0d2120cc2_67328185 ($_smarty_tpl) {
 if (!is_callable('smarty_modifier_date_format')) require_once 'C:\\wamp64\\www\\p2\\src\\includes\\libs\\Smarty\\plugins\\modifier.date_format.php';
 ?>
   <div class="content-wrapper">

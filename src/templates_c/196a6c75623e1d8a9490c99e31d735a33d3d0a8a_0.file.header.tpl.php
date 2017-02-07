@@ -1,17 +1,17 @@
 <?php
-/* Smarty version 3.1.29, created on 2017-02-05 21:26:31
+/* Smarty version 3.1.29, created on 2017-02-07 20:22:35
   from "C:\wamp64\www\p2\src\templates\header.tpl" */
 
 if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
   'has_nocache_code' => false,
   'version' => '3.1.29',
-  'unifunc' => 'content_58979887d3eb07_18629924',
+  'unifunc' => 'content_589a2c8b7ff905_04269339',
   'file_dependency' => 
   array (
     '196a6c75623e1d8a9490c99e31d735a33d3d0a8a' => 
     array (
       0 => 'C:\\wamp64\\www\\p2\\src\\templates\\header.tpl',
-      1 => 1486329990,
+      1 => 1486498953,
       2 => 'file',
     ),
   ),
@@ -19,7 +19,7 @@ if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl,
   array (
   ),
 ),false)) {
-function content_58979887d3eb07_18629924 ($_smarty_tpl) {
+function content_589a2c8b7ff905_04269339 ($_smarty_tpl) {
 ?>
 <!DOCTYPE html>
 <!--
@@ -90,8 +90,8 @@ desired effect
 				<!-- mini logo for sidebar mini 50x50 pixels -->
 				<span class="logo-mini"><b>GS</b>A</span>
 				<!-- logo for regular state and mobile devices -->
-				<img src="upload_files/association_settings/<?php echo $_smarty_tpl->tpl_vars['assoLogo']->value;?>
-" class="img" alt="User Image">
+				<!-- <img src="upload_files/association_settings/<?php echo $_smarty_tpl->tpl_vars['assoLogo']->value;?>
+" class="img" alt="User Image"> -->
 				<b><?php echo $_smarty_tpl->tpl_vars['assoName']->value;?>
 </b>
 			</a>

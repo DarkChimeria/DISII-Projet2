@@ -7,7 +7,7 @@ include '/models/models.php';
 
 function recentsUsers(){
 	$cnx = getBD();
-	$sql = 'SELECT * FROM users,usertype,listusersgroup,groups,licenses WHERE users.usertype_id=usertype.usertype_id AND listusersgroup.user_id = users.user_id AND listusersgroup.group_id = groups.group_id AND licenses.user_id=users.user_id ORDER BY user_dateCreation DESC LIMIT 0,3 ';
+	$sql = 'SELECT * FROM users,usertype,listusersgroup,groups,licenses WHERE users.usertype_id=usertype.usertype_id AND listusersgroup.user_id = users.user_id AND listusersgroup.group_id = groups.group_id AND licenses.user_id=users.user_id ORDER BY user_dateCreation DESC LIMIT 0,6 ';
 	$idResult  = executeR($cnx,$sql);
 	return $idResult;
 }

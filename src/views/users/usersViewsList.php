@@ -67,7 +67,7 @@ else // La variable n'existe pas, c'est la première fois qu'on charge la page
 $premierMessageAafficher = ($page - 1) * $nbUsers;
 
 
-$idResult3 = listeCountLimitProduits($premierMessageAafficher,$nbUsers);
+$idResult3 = listeCountLimitUsers($premierMessageAafficher,$nbUsers);
 $pagination = array();
 $a = 0;
 while($row=$idResult3->fetch(PDO::FETCH_ASSOC)){

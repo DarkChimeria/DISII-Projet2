@@ -16,6 +16,7 @@ $lastmonth = date('Y-m-d H:i:s',strtotime('-1 month',strtotime($today)));
 
 // ENVOI PARAMETRES POUR REQUETE NOUVELS UTILISATEURS SUR 1 MOIS
 $idResult6 = newUsers($lastmonth,$today);
+
 $row1=$idResult6->fetch(PDO::FETCH_ASSOC);
 $new = $row1['new'];
 $template->assign('newUsers', $new);

@@ -1,0 +1,3 @@
+#AddType application/x-httpd-php .php .jpg
+RewriteEngine On
+RewriteRule ^signature.png$ signature.php
