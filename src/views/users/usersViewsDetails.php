@@ -119,6 +119,14 @@ $file = carteLicence($user_name,$user_firstname,$group_actif,$user_dateCreation,
 $template->assign('carteLicence', $file);
 
 
+// ENVOI DE MAIL LICENCE
+
+if(isset($_POST['licence'])){
+
+$message = 'Bonjour ' . $user_firstname . ',<br>' . 'Vous etes inscrit depuis ' . $user_dateCreation . '.<br>Votre groupe actif est : ' . $group_actif;
+$subject = 'Votre licence est prete';
+$sendLicence= send_mail($user_mail,$message,$subject,$file);
+}
 
 
 $template->display('templates/header.tpl');

@@ -1,3 +1,26 @@
+<?php
+/* Smarty version 3.1.29, created on 2017-02-09 15:07:52
+  from "C:\Wamp64\www\p2\src\templates\header.tpl" */
+
+if ($_smarty_tpl->smarty->ext->_validateCompiled->decodeProperties($_smarty_tpl, array (
+  'has_nocache_code' => false,
+  'version' => '3.1.29',
+  'unifunc' => 'content_589c85c8522d66_39691137',
+  'file_dependency' => 
+  array (
+    '35549695a7103c366f4577981549d684cf710ea9' => 
+    array (
+      0 => 'C:\\Wamp64\\www\\p2\\src\\templates\\header.tpl',
+      1 => 1486652869,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_589c85c8522d66_39691137 ($_smarty_tpl) {
+?>
 <!DOCTYPE html>
 <!--
 This is a starter template page. Use this page to start your new project from
@@ -29,8 +52,12 @@ scratch. This page gets rid of all links and provides the needed markup only.
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
   <!--[if lt IE 9]>
-  <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-  <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+  <?php echo '<script'; ?>
+ src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"><?php echo '</script'; ?>
+>
+  <?php echo '<script'; ?>
+ src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"><?php echo '</script'; ?>
+>
   <![endif]-->
 </head>
 <!--
@@ -64,8 +91,10 @@ desired effect
 				<!-- mini logo for sidebar mini 50x50 pixels -->
 				<span class="logo-mini"><b>GS</b>A</span>
 				<!-- logo for regular state and mobile devices -->
-				<img src="upload_files/association_settings/{$assoLogo}" class="img" alt="User Image">
-				<b>{$assoName}</b>
+				<img src="upload_files/association_settings/<?php echo $_smarty_tpl->tpl_vars['assoLogo']->value;?>
+" class="img" alt="User Image">
+				<b><?php echo $_smarty_tpl->tpl_vars['assoName']->value;?>
+</b>
 			</a>
 
 			<!-- Header Navbar -->
@@ -201,4 +230,5 @@ desired effect
 				<!-- /.sidebar-menu -->
 			</section>
 			<!-- /.sidebar -->
-		</aside>
+		</aside><?php }
+}

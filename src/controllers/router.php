@@ -7,6 +7,8 @@ Script de cours PHP - MVC - Smarty
 $login = 'login';
 $listUsers = 'listUsers';
 $detailsU = 'detailsU';
+$listGroups = 'listGroups';
+$detailsG = 'detailsG';
 
 switch($gestion){
 	case  'home':
@@ -17,6 +19,9 @@ switch($gestion){
 	break;
 	case  'users':
 	require_once 'users/' . $gestion . 'Controllers.php';
+	break;
+	case  'groups':
+	require_once 'groups/' . $gestion . 'Controllers.php';
 	break;
 	default:
 	echo 'Impossible !';
@@ -38,6 +43,11 @@ if($val == $login){
 }elseif($val == $detailsU){
 	$id = $_GET['id'];
 	detailsU($id);
+}elseif($val == $listGroups){
+	listG();
+}elseif($val == $detailsG){
+	$id = $_GET['id'];
+	detailsG($id);
 }elseif(empty($val)){
 	home();
 }

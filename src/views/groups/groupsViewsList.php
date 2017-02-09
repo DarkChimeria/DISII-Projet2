@@ -8,7 +8,7 @@ require_once 'includes/libs/Smarty/Smarty.class.php';
 
 $template = new Smarty();
 
-$listeUsers = array();
+$listeGroups = array();
 $i = 0;
 
 // while($row=$idResult->fetch(PDO::FETCH_ASSOC)){
@@ -19,8 +19,8 @@ $i = 0;
 // 	$i++;
 // }
 $nblignes = $idResult->rowCount();
-$template->assign('title','Liste des membres');
-$template->assign('fil', 'Liste des membres');
+$template->assign('title','Liste des groupes');
+$template->assign('fil', 'Liste des groupes');
 $template->assign('nblignes',$nblignes);
 
 
@@ -33,25 +33,25 @@ if(!empty($_GET['success'])){
 
 if(isset($_POST['nbAafficher']) == 10){
 
-$nbUsers = 10;
+$nbGroups = 10;
 
 }elseif(isset($_POST['nbAafficher']) == 15){
 
-	$nbUsers = 15;
+	$nbGroups = 15;
 	
 }elseif(isset($_POST['nbAafficher']) == 20){
 
-	$nbUsers = 20;
+	$nbGroups = 20;
 
 }else{
 
-	$nbUsers = 10;
+	$nbGroups = 10;
 
 }
 
 
 
-$nbpages = ceil($nblignes / $nbUsers);
+$nbpages = ceil($nblignes / $nbGroups);
 $template->assign('nbpages', $nbpages);
 
 if (isset($_GET['page']))
@@ -64,17 +64,17 @@ else // La variable n'existe pas, c'est la première fois qu'on charge la page
 }
  
 // On calcule le numéro du premier message qu'on prend pour le LIMIT de MySQL
-$premierMessageAafficher = ($page - 1) * $nbUsers;
+$premierMessageAafficher = ($page - 1) * $nbGroups;
 
 
-$idResult3 = listeCountLimitUsers($premierMessageAafficher,$nbUsers);
+$idResult3 = listeCountLimitGroups($premierMessageAafficher,$nbGroups);
 $pagination = array();
 $a = 0;
 while($row=$idResult3->fetch(PDO::FETCH_ASSOC)){
-	$pagination[$a]['user_id'] = $row['user_id'];
-	$pagination[$a]['user_name'] = $row['user_name'];
-	$pagination[$a]['user_firstname'] = $row['user_firstname'];
-	$pagination[$a]['user_mail'] = $row['user_mail'];
+	$pagination[$a]['group_id'] = $row['group_id'];
+	$pagination[$a]['group_name'] = $row['group_name'];
+	$pagination[$a]['group_description'] = $row['group_description'];
+	$pagination[$a]['group_activity'] = $row['group_activity'];
 	$a++;
 }
 
@@ -98,5 +98,5 @@ $template->assign('assoLogo', $assoLogo);
 //FIN
 
 $template->display('templates/header.tpl');
-$template->display('templates/users/usersViewsList.tpl');
+$template->display('templates/groups/groupsViewsList.tpl');
 $template->display('templates/footer.tpl');

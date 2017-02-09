@@ -1,4 +1,4 @@
-.widget-user .caption-title {
+.widget-user .caption-title_user {
 	bottom: 80px;
 	text-align: center;
 	z-index: 15;
@@ -10,3 +10,53 @@
 	background-color: rgba(112, 112, 112, 0.53);
 	width: 100%;
 }
+
+.widget-user-2 .caption-title-group {
+	bottom: 80px;
+	text-align: center;
+	z-index: 15;
+/*	padding-top: 5px;
+	padding-bottom: 5px;*/
+	color: #fff;
+/*	padding-left: 20px;*/
+	text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+	background-color: rgba(112, 112, 112, 0.53);
+	width: 40%;
+	font-weight: bold;
+}
+
+.widget-user-2 .caption-title-activity {
+	bottom: 80px;
+	text-align: center;
+	z-index: 15;
+/*	padding-top: 5px;
+	padding-bottom: 5px;*/
+	color: #fff;
+/*	padding-left: 20px;*/
+	text-shadow: 0 1px 2px rgba(0, 0, 0, .6);
+	background-color: rgba(112, 112, 112, 0.53);
+	width: 40%;
+
+}
+.main-header .logo {
+	font-size: 14px !important;
+}
+
+
+.info-box img{
+	border-top-left-radius: 2px;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+	border-bottom-left-radius: 2px;
+	display: block;
+	float: left;
+	height: 90px;
+	width: 90px;
+	text-align: center;
+	font-size: 45px;
+	line-height: 90px;
+	background: rgba(0,0,0,0.2);
+	vertical-align: none;
+}
+
+

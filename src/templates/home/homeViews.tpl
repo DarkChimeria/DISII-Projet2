@@ -90,7 +90,7 @@
             <!-- Add the bg color to the header using any of the bg-* classes -->
             <div class="widget-user-header bg-aqua-active"  style="background: url('upload_files/group_cover/{$Users.group_cover}') center center;">
                 <!-- <div class="caption-title"> -->
-              <h3 class="widget-user-username caption-title">{$Users.user_name} {$Users.user_firstname} - {$Users.group_name}</h3>
+              <a href="index.php?gestion=users&action=detailsU&id={$Users.user_id}"><h3 class="widget-user-username caption-title_user">{$Users.user_name} {$Users.user_firstname} - {$Users.group_name}</h3></a>
        <!--        </div> -->
               <h5 class="widget-user-desc"></h5>
             </div>
@@ -157,8 +157,8 @@
               <img class="img-circle" src="upload_files/group_avatar/{$Groups.group_avatar}" alt="User Avatar">
               </div>
               <!-- /.widget-user-image -->
-              <h3 class="widget-user-username">{$Groups.group_name}</h3>
-              <h5 class="widget-user-desc">{$Groups.group_activity}</h5>
+              <a href="index.php?gestion=groups&action=detailsG&id={$Groups.group_id}"><h3 class="widget-user-username caption-title-group">{$Groups.group_name}</h3>
+             <a href="index.php?gestion=groups&action=detailsG&id={$Groups.group_id}"><h5 class="widget-user-desc caption-title-activity">{$Groups.group_activity}</h5>
             </div>
             <div class="box-footer no-padding">
               <ul class="nav nav-stacked">
